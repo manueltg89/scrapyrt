@@ -7,13 +7,13 @@ with open(join(dirname(__file__), 'scrapyrt/VERSION'), 'rb') as f:
     version = f.read().decode('ascii').strip()
 
 setup(
-    name="scrapyrt",
+    name="scrapyrt-with-params",
     version=version,
-    author='Scrapinghub',
-    author_email='info@scrapinghub.com',
-    url="https://github.com/scrapinghub/scrapyrt",
+    author='Manuel Trinidad Garcia',
+    author_email='manuel.trinidad.garcia@hotmail.com',
+    url="https://github.com/manueltg89/scrapyrt-with-params",
     maintainer='Scrapinghub',
-    maintainer_email='info@scrapinghub.com',
+    maintainer_email='manuel.trinidad.garcia@hotmail.com',
     description='Put Scrapy spiders behind an HTTP API',
     long_description=open('README.rst').read(),
     license='BSD',
