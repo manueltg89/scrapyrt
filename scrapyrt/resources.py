@@ -212,6 +212,14 @@ class CrawlResource(ServiceResource):
             max_requests = api_params['max_requests']
         except (KeyError, IndexError):
             max_requests = None
+
+        """ INICIO NUEVO AÑADIDO MANUEL """
+        crawler_params = api_params.copy()
+        for api_param in ['max_requests', 'start_requests', 'spider_name', 'url']:
+            crawler_params.pop(api_param, None)
+        kwargs.update(crawler_params)
+        """" FIN NUEVO AÑADIDO MANUEL """
+
         dfd = self.run_crawl(
             spider_name, scrapy_request_args, max_requests,
             start_requests=start_requests, *args, **kwargs)
